@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    html, body { margin: 0; padding: 0; background: #F7F1E6; }
+    body { font-family: 'Public Sans', sans-serif; color: #131F42; -webkit-font-smoothing: antialiased; }
+    a { color: #1C46B8; text-decoration: none; }
+    a:hover { color: #E8A33D; }
+    * { box-sizing: border-box; }
+  </style>
+</helmet>
+
+<div style="min-width: 1100px; background: #F7F1E6" data-screen-label="The Journey 2.0 Landing">
+
+  <!-- NAV -->
+  <nav style="display: flex; align-items: center; justify-content: space-between; padding: 22px 56px; max-width: 1360px; margin: 0 auto">
+    <div style="display: flex; align-items: baseline; gap: 10px">
+      <span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 22px; letter-spacing: 0.02em; color: #131F42">THE JOURNEY</span>
+      <span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 15px; color: #F7F1E6; background: #1C46B8; padding: 2px 9px; border-radius: 99px">2.0</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 36px">
+      <a href="#about" style="font-size: 15px; font-weight: 600; color: #131F42" style-hover="color: #1C46B8">About</a>
+      <a href="#experience" style="font-size: 15px; font-weight: 600; color: #131F42" style-hover="color: #1C46B8">The Experience</a>
+      <a href="#speakers" style="font-size: 15px; font-weight: 600; color: #131F42" style-hover="color: #1C46B8">Speakers</a>
+      <a href="#who" style="font-size: 15px; font-weight: 600; color: #131F42" style-hover="color: #1C46B8">Who It's For</a>
+      <a href="{{ registerUrl }}" style="font-size: 15px; font-weight: 700; color: #F7F1E6; background: #1C46B8; padding: 12px 26px; border-radius: 99px; display: inline-block" style-hover="background: #16368F; color: #F7F1E6">Register Now</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header style="max-width: 1360px; margin: 0 auto; padding: 48px 56px 88px; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: 64px; align-items: center">
+    <div>
+      <div style="display: inline-flex; align-items: center; gap: 10px; border: 1.5px solid #131F42; border-radius: 99px; padding: 8px 18px; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 32px">
+        <span style="width: 8px; height: 8px; border-radius: 50%; background: #E8A33D; display: inline-block"></span>
+        Business &amp; Entrepreneurship
+      </div>
+      <h1 style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(54px, 5.8vw, 84px); line-height: 0.98; letter-spacing: -0.02em; margin: 0 0 28px">
+        Every big<br>business starts<br>with <em style="font-style: italic; color: #1C46B8">a journey.</em>
+      </h1>
+      <p style="font-size: 19px; line-height: 1.6; color: #3D4763; max-width: 520px; margin: 0 0 36px; text-wrap: pretty">
+        A dynamic business conference by People's Development Community — bringing SME owners, startups and business enthusiasts together to showcase ideas, pitch for funding, learn from industry leaders, and meet the people who can move your business forward.
+      </p>
+      <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 40px">
+        <a href="{{ registerUrl }}" style="font-size: 17px; font-weight: 700; color: #F7F1E6; background: #131F42; padding: 18px 38px; border-radius: 99px; display: inline-block" style-hover="background: #1C46B8; color: #F7F1E6">Register Now — It Starts Here</a>
+        <a href="#experience" style="font-size: 16px; font-weight: 700; color: #131F42; padding: 18px 10px" style-hover="color: #1C46B8">See what's on ↓</a>
+      </div>
+      <div style="display: flex; gap: 40px; border-top: 1.5px solid #DED4C0; padding-top: 24px">
+        <div>
+          <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #8A8064; margin-bottom: 6px">Date &amp; time</div>
+          <div style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 20px; font-weight: 700">{{ eventDate }}</div>
+          <div style="font-size: 14px; font-weight: 600; color: #3D4763; margin-top: 2px">{{ eventTime }}</div>
+        </div>
+        <div>
+          <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #8A8064; margin-bottom: 6px">Venue</div>
+          <div style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 20px; font-weight: 700">{{ venue }}</div>
+          <div style="font-size: 14px; font-weight: 600; color: #3D4763; margin-top: 2px">Bariga, Lagos</div>
+        </div>
+        <div>
+          <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #8A8064; margin-bottom: 6px">Admission</div>
+          <div style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 20px; font-weight: 700">{{ admission }}</div>
+        </div>
+      </div>
+    </div>
+    <div style="position: relative">
+      <div style="position: relative; width: 100%; height: 560px">
+        <image-slot id="hero-photo" shape="rounded" radius="28" placeholder="Drop your event photo here" style="position: absolute; inset: 0; width: 100%; height: 100%"></image-slot>
+      </div>
+      <div style="position: absolute; left: -28px; bottom: 36px; background: #E8A33D; color: #131F42; border-radius: 18px; padding: 18px 24px; box-shadow: 0 14px 40px rgba(19,31,66,0.18); pointer-events: none">
+        <div style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 26px; line-height: 1">Pitch. Learn.</div>
+        <div style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 26px; line-height: 1.2">Connect.</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" style="background: #131F42; color: #F7F1E6">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 96px 56px; display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 72px; align-items: start">
+      <div>
+        <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #E8A33D; margin-bottom: 20px">About the event</div>
+        <h2 style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 48px; line-height: 1.05; letter-spacing: -0.01em; margin: 0">A platform built for people building something.</h2>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 24px">
+        <p style="font-size: 19px; line-height: 1.7; color: #C7CCE0; margin: 0; text-wrap: pretty">
+          The Journey 2.0 is a dynamic business conference designed to empower Small and Medium-sized Enterprises — a powerful platform for visibility, networking, and access to funding and business knowledge.
+        </p>
+        <p style="font-size: 19px; line-height: 1.7; color: #C7CCE0; margin: 0; text-wrap: pretty">
+          Following the success of The Journey 1.0, which focused on career development, this second edition shifts the spotlight to entrepreneurship and enterprise growth.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE / PILLARS -->
+  <section id="experience" style="max-width: 1360px; margin: 0 auto; padding: 104px 56px 96px">
+    <div style="display: flex; align-items: end; justify-content: space-between; margin-bottom: 56px; gap: 40px">
+      <h2 style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 52px; line-height: 1.02; letter-spacing: -0.01em; margin: 0; max-width: 560px">What happens at The Journey 2.0</h2>
+      <p style="font-size: 17px; line-height: 1.6; color: #3D4763; max-width: 380px; margin: 0 0 6px; text-wrap: pretty">Four ways the day works for you — pick one, or do all four.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px">
+      <div style="background: #FFFDF8; border: 1.5px solid #E5DCC8; border-radius: 24px; padding: 40px 40px 36px" style-hover="border-color: #1C46B8">
+        <div style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 17px; color: #1C46B8; margin-bottom: 22px">01</div>
+        <h3 style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 28px; margin: 0 0 14px">Showcase your business idea</h3>
+        <p style="font-size: 16px; line-height: 1.65; color: #3D4763; margin: 0; text-wrap: pretty">Exhibitions and presentations that put emerging enterprises in front of an audience that matters — visibility for the ideas you've been building quietly.</p>
+      </div>
+      <div style="background: #FFFDF8; border: 1.5px solid #E5DCC8; border-radius: 24px; padding: 40px 40px 36px" style-hover="border-color: #1C46B8">
+        <div style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 17px; color: #1C46B8; margin-bottom: 22px">02</div>
+        <h3 style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 28px; margin: 0 0 14px">Pitch for real funding</h3>
+        <p style="font-size: 16px; line-height: 1.65; color: #3D4763; margin: 0; text-wrap: pretty">Live pitching sessions where selected SMEs present directly to funders — and can walk away with genuine financial support for their business.</p>
+      </div>
+      <div style="background: #FFFDF8; border: 1.5px solid #E5DCC8; border-radius: 24px; padding: 40px 40px 36px" style-hover="border-color: #1C46B8">
+        <div style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 17px; color: #1C46B8; margin-bottom: 22px">03</div>
+        <h3 style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 28px; margin: 0 0 14px">Learn from industry leaders</h3>
+        <p style="font-size: 16px; line-height: 1.65; color: #3D4763; margin: 0; text-wrap: pretty">Panel discussions with people who've done it — practical, strategic business knowledge you can apply on Monday morning.</p>
+      </div>
+      <div style="background: #FFFDF8; border: 1.5px solid #E5DCC8; border-radius: 24px; padding: 40px 40px 36px" style-hover="border-color: #1C46B8">
+        <div style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 17px; color: #1C46B8; margin-bottom: 22px">04</div>
+        <h3 style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 28px; margin: 0 0 14px">Meet the right people</h3>
+        <p style="font-size: 16px; line-height: 1.65; color: #3D4763; margin: 0; text-wrap: pretty">Deliberate networking that connects entrepreneurs with investors and funding organisations — the room is the point.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPEAKERS -->
+  <section id="speakers" style="background: #FFFDF8; border-top: 1.5px solid #E5DCC8; border-bottom: 1.5px solid #E5DCC8">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 96px 56px">
+      <div style="text-align: center; margin-bottom: 56px">
+        <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #B8862F; margin-bottom: 16px">On stage</div>
+        <h2 style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 48px; line-height: 1.05; margin: 0">Your host &amp; panelists</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 32px">
+        <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px">
+          <div style="position: relative; width: 168px; height: 168px">
+            <image-slot id="speaker-wale" shape="circle" placeholder="Photo" style="position: absolute; inset: 0; width: 100%; height: 100%"></image-slot>
+          </div>
+          <div>
+            <div style="display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #F7F1E6; background: #1C46B8; border-radius: 99px; padding: 4px 12px; margin-bottom: 10px">Host</div>
+            <div style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px">Coach Wale</div>
+            <div style="font-size: 14px; line-height: 1.5; color: #3D4763; margin-top: 4px">Founder, People's Development Community</div>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px">
+          <div style="position: relative; width: 168px; height: 168px">
+            <image-slot id="speaker-oreoluwa" shape="circle" placeholder="Photo" style="position: absolute; inset: 0; width: 100%; height: 100%"></image-slot>
+          </div>
+          <div>
+            <div style="display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #131F42; background: #F0E4C8; border-radius: 99px; padding: 4px 12px; margin-bottom: 10px">Panelist</div>
+            <div style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px">Oreoluwa M. Ajayi</div>
+            <div style="font-size: 14px; line-height: 1.5; color: #3D4763; margin-top: 4px">Founder, Grevigo · Green technology</div>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px">
+          <div style="position: relative; width: 168px; height: 168px">
+            <image-slot id="speaker-paul" shape="circle" placeholder="Photo" style="position: absolute; inset: 0; width: 100%; height: 100%"></image-slot>
+          </div>
+          <div>
+            <div style="display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #131F42; background: #F0E4C8; border-radius: 99px; padding: 4px 12px; margin-bottom: 10px">Panelist</div>
+            <div style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px">Paul Adetunji</div>
+            <div style="font-size: 14px; line-height: 1.5; color: #3D4763; margin-top: 4px">Certified Business Analyst · Managing Partner, Polo Hospitalities</div>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px">
+          <div style="position: relative; width: 168px; height: 168px">
+            <image-slot id="speaker-friday" shape="circle" placeholder="Photo" style="position: absolute; inset: 0; width: 100%; height: 100%"></image-slot>
+          </div>
+          <div>
+            <div style="display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #131F42; background: #F0E4C8; border-radius: 99px; padding: 4px 12px; margin-bottom: 10px">Panelist</div>
+            <div style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px">Friday Ojonimi I.</div>
+            <div style="font-size: 14px; line-height: 1.5; color: #3D4763; margin-top: 4px">Founder, Sharetrip LTD · Transportation</div>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px">
+          <div style="position: relative; width: 168px; height: 168px">
+            <image-slot id="speaker-damilola" shape="circle" placeholder="Photo" style="position: absolute; inset: 0; width: 100%; height: 100%"></image-slot>
+          </div>
+          <div>
+            <div style="display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #131F42; background: #F0E4C8; border-radius: 99px; padding: 4px 12px; margin-bottom: 10px">Panelist</div>
+            <div style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 20px">Damilola Olasunkanmi</div>
+            <div style="font-size: 14px; line-height: 1.5; color: #3D4763; margin-top: 4px">Founder, Indulgence Naturals · Beauty &amp; wellness</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IT'S FOR -->
+  <section id="who" style="max-width: 1360px; margin: 0 auto; padding: 0 56px 104px">
+    <div style="display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: 64px; align-items: center">
+      <div style="position: relative; width: 100%; height: 420px">
+        <image-slot id="who-photo" shape="rounded" radius="28" placeholder="Drop a photo — attendees, a past event, your team" style="position: absolute; inset: 0; width: 100%; height: 100%"></image-slot>
+      </div>
+      <div>
+        <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #B8862F; margin-bottom: 20px">Who it's for</div>
+        <h2 style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 46px; line-height: 1.05; margin: 0 0 32px">If you're building, you belong here.</h2>
+        <div style="display: flex; flex-direction: column; gap: 18px">
+          <div style="display: flex; gap: 16px; align-items: baseline">
+            <span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; color: #1C46B8; font-size: 18px">→</span>
+            <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #131F42"><strong>SME owners</strong> ready to grow — looking for funding, visibility, or both.</p>
+          </div>
+          <div style="display: flex; gap: 16px; align-items: baseline">
+            <span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; color: #1C46B8; font-size: 18px">→</span>
+            <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #131F42"><strong>Startups</strong> with an idea worth showing and a pitch worth hearing.</p>
+          </div>
+          <div style="display: flex; gap: 16px; align-items: baseline">
+            <span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; color: #1C46B8; font-size: 18px">→</span>
+            <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #131F42"><strong>Business enthusiasts</strong> who want to learn from the people doing it for real.</p>
+          </div>
+          <div style="display: flex; gap: 16px; align-items: baseline">
+            <span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; color: #1C46B8; font-size: 18px">→</span>
+            <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #131F42"><strong>Investors &amp; funders</strong> looking for their next great conversation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORGANIZERS -->
+  <section id="organizers" style="max-width: 1360px; margin: 0 auto; padding: 0 56px 104px">
+    <div style="background: #FFFDF8; border: 1.5px solid #E5DCC8; border-radius: 28px; padding: 64px; display: grid; grid-template-columns: minmax(0, 0.4fr) minmax(0, 0.6fr); gap: 56px; align-items: center">
+      <div style="display: flex; align-items: center; gap: 28px">
+        <div style="position: relative; width: 150px; height: 150px; flex-shrink: 0">
+          <image-slot id="organizer-photo" shape="circle" placeholder="Coach Wale" style="position: absolute; inset: 0; width: 100%; height: 100%"></image-slot>
+        </div>
+        <div style="position: relative; width: 110px; height: 110px; flex-shrink: 0">
+          <image-slot id="pdc-logo" shape="circle" placeholder="PDC logo" style="position: absolute; inset: 0; width: 100%; height: 100%"></image-slot>
+        </div>
+      </div>
+      <div>
+        <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #B8862F; margin-bottom: 16px">The organizers</div>
+        <h2 style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 36px; line-height: 1.1; margin: 0 0 18px">People's Development Community</h2>
+        <p style="font-size: 17px; line-height: 1.7; color: #3D4763; margin: 0; text-wrap: pretty">
+          PDC by Coach Wale is a growth-focused network designed to empower individuals and businesses — helping people access job opportunities, gain relevant skills, and grow professionally, and giving businesses a platform to connect, collaborate and tap into shared growth. At PDC, we believe in collective progress: when people grow, communities grow.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTER CTA -->
+  <section style="background: #1C46B8; color: #F7F1E6">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 100px 56px; text-align: center">
+      <h2 style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 64px; line-height: 1.02; letter-spacing: -0.015em; margin: 0 0 20px">Your journey starts<br>with one step.</h2>
+      <p style="font-size: 19px; line-height: 1.6; color: #C7D3F5; max-width: 520px; margin: 0 auto 40px; text-wrap: pretty">Seats and pitching slots are limited. Register now and be in the room on {{ eventDate }} at {{ eventTime }} — {{ venue }}, Bariga, Lagos.</p>
+      <a href="{{ registerUrl }}" style="font-size: 18px; font-weight: 700; color: #131F42; background: #E8A33D; padding: 20px 48px; border-radius: 99px; display: inline-block" style-hover="background: #F7F1E6; color: #131F42">Register Now</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background: #131F42; color: #8B93B3">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 64px 56px 40px">
+      <div style="display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr); gap: 56px; padding-bottom: 40px; border-bottom: 1px solid #2A346C">
+        <div>
+          <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 14px">
+            <span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 19px; color: #F7F1E6">THE JOURNEY 2.0</span>
+          </div>
+          <p style="font-size: 14px; line-height: 1.6; margin: 0; max-width: 320px">A business &amp; entrepreneurship conference by People's Development Community by Coach Wale.</p>
+        </div>
+        <div>
+          <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #E8A33D; margin-bottom: 14px">Contact</div>
+          <div style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 1.6">
+            <a href="mailto:thejourneypdc@gmail.com" style="color: #C7CCE0" style-hover="color: #E8A33D">thejourneypdc@gmail.com</a>
+            <span>{{ venueAddress }}</span>
+          </div>
+        </div>
+        <div>
+          <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #E8A33D; margin-bottom: 14px">Follow the journey</div>
+          <div style="display: flex; flex-direction: column; gap: 8px; font-size: 14px">
+            <a href="https://www.instagram.com/thejourneypdc" style="color: #C7CCE0" style-hover="color: #E8A33D">Instagram — @thejourneypdc</a>
+            <a href="https://www.tiktok.com/@thejourneypdc" style="color: #C7CCE0" style-hover="color: #E8A33D">TikTok — @thejourneypdc</a>
+            <a href="https://www.facebook.com/share/18szcYSQQF/" style="color: #C7CCE0" style-hover="color: #E8A33D">Facebook — The Journey PDC</a>
+          </div>
+        </div>
+      </div>
+      <div style="padding-top: 24px; font-size: 13px; display: flex; justify-content: space-between">
+        <span>© The Journey 2.0 · People's Development Community</span>
+        <span>{{ eventDate }} · {{ venue }}</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<div style="position: absolute; width: 0; height: 0; overflow: hidden">
+  <x-import component-from-global-scope="image-slot" from="./image-slot.js" hint-size="0,0"></x-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;eventDate&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Saturday, July 5th&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Event details&quot;},
+  &quot;eventTime&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;10:00 AM GMT+1&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Event details&quot;},
+  &quot;venue&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Temidire Onajimi DCC Hall&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Event details&quot;},
+  &quot;venueAddress&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;19/21 Onajimi Street, Off Pedro Road, Bariga, Lagos&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Event details&quot;},
+  &quot;admission&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Free entry&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Event details&quot;},
+  &quot;registerUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://forms.gle/aFVx7Z18PsB4YTMh9&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Registration&quot;}
+}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      eventDate: this.props.eventDate ?? "Saturday, July 5th",
+      eventTime: this.props.eventTime ?? "10:00 AM GMT+1",
+      venue: this.props.venue ?? "Temidire Onajimi DCC Hall",
+      venueAddress: this.props.venueAddress ?? "19/21 Onajimi Street, Off Pedro Road, Bariga, Lagos",
+      admission: this.props.admission ?? "Free entry",
+      registerUrl: this.props.registerUrl ?? "https://forms.gle/aFVx7Z18PsB4YTMh9",
+    };
+  }
+}
+</script>
+</body>
+</html>
