@@ -756,7 +756,6 @@ main > section,
   .hero-inner {
     grid-template-columns: minmax(0, 1fr);
   }
-  .hero-media { order: -1; }
   .hero-photo-frame { aspect-ratio: 16/10; min-height: 260px; }
 
   .about-inner { grid-template-columns: minmax(0, 1fr); }
