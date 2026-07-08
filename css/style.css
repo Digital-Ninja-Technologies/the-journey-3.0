@@ -361,6 +361,7 @@ main > section,
   width: 100%;
   aspect-ratio: 1 / 0.95;
   min-height: 260px;
+  margin-top: 40px;
   border-radius: 28px;
   overflow: hidden;
   box-shadow: 0 24px 60px rgba(19,31,66,0.16);
