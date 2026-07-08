@@ -210,6 +210,9 @@ main > section,
   max-width: var(--container);
   margin: 0 auto;
 }
+main > section + section {
+  margin-top: 80px;
+}
 
 .eyebrow {
   font-size: 13px;
